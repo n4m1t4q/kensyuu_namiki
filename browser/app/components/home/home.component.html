@@ -1,0 +1,38 @@
+<div class="home">
+  <h2>ホーム画面</h2>
+
+  <!--他のコンポーネントに遷移するときに使用  -->
+  <!-- <a [routerLink]="'/home2'">go to home2</a> -->
+
+  <!-- エラーメッセージ -->
+  <p *ngIf="message" class="error-message">{{ message }}</p>
+
+  <!-- 入力エリア -->
+  <div class="condition">
+    <label>ユーザID</label>
+    <input type="number" [(ngModel)]="id">
+
+    <label>名前</label>
+    <input type="text" [(ngModel)]="name">
+
+    <label>年齢</label>
+    <input type="number" [(ngModel)]="age">
+
+    <button (click)="test()">表示追加</button>
+    <button (click)="resetList()">リセット</button>
+  </div>
+
+  <!-- 一覧表示エリア -->
+  <table>
+    <thead>
+      <tr>
+        <th>ID</th><th>名前</th><th>年齢</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let element of sampleList">
+        <td>{{ element.id }}</td><td>{{ element.name }}</td><td>{{ element.age }}歳</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
