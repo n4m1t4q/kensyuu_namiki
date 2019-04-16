@@ -1,8 +1,8 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 
-import { SAMPLE_API_PATH, ISampleRequest, ISampleResponse } from '../../common/apis/sample/sample.api';
-import { Sample } from '../../common/entities/sample/sample.entity';
+import { SAMPLE_API_PATH, ISampleRequest, ISampleResponse } from 'common/apis/sample/sample.api';
+import { Sample } from 'common/entities/sample/sample.entity';
 import { HttpService } from '../http.service';
 
 @Injectable({

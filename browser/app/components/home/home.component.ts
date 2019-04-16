@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 
-import { Sample } from '../../common/entities/sample/sample.entity';
+import { Sample } from 'common/entities/sample/sample.entity';
 import { SampleService } from '../../services/sample/sample.service';
 
 @Component({
