@@ -49,7 +49,7 @@ export class HomeComponent implements OnInit {
     }
   }
 
-  async createuser() {
+  async createUser() {
     this.message = '';
 
     if (this.name && this.age) {

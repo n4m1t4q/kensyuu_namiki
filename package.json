@@ -4,10 +4,12 @@
   "scripts": {
     "ng": "ng",
     "dev": "ne serve",
-    "start": "npx node-static ./dist/demo-namiki --spa --port=3000",
-    "build": "npm run build:client",
+    "start": "node ./dist/server/web-server.js",
+    "start:npx": "npx node-static ./dist/demo-namiki --spa --port=3000",
+    "build": "npm run build:client && npm run build:server",
     "build:client": "ng run demo-namiki:app-shell:production",
     "build:clientsub": "ng build && ng run demo-namiki:server",
+    "build:server": "tsc --project server --outDir dist --allowjs true",
     "test": "ng test",
     "lint": "ng lint",
     "e2e": "ng e2e"
